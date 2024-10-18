@@ -1,6 +1,6 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
-
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
@@ -29,6 +29,15 @@ export default function TabLayout() {
           title: 'Explore',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="itest"
+        options={{
+          title: 'Create ticket',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'create' : 'create-outline'} color={color} />
           ),
         }}
       />
